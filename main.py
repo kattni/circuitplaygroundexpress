@@ -5,7 +5,6 @@ import math
 import array
 import audioio
 import touchio
-import adafruit_circuitplayground.express
 from adafruit_circuitplayground.express import circuit
 from board import *
 
