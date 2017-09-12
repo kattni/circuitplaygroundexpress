@@ -1,4 +1,3 @@
-import board
 import time
 import digitalio
 import math
@@ -33,7 +32,7 @@ while True:
         continue
     if touch1.value:
         print('touched 1!')
-        circuit.pixels.fill((30, 0, 0))
+        circuit.pixels.fill((10, 0, 0))
         circuit.pixels.write()
         if not sample.playing or (
           (sample.playing and not sample.frequency == 8000)):
@@ -41,7 +40,7 @@ while True:
             sample.play(loop=True)
     elif touch2.value:
         print('touched 2!')
-        circuit.pixels.fill((30, 10, 0))
+        circuit.pixels.fill((10, 5, 0))
         circuit.pixels.write()
         if not sample.playing or (
          (sample.playing and not sample.frequency == 9000)):
@@ -49,7 +48,7 @@ while True:
             sample.play(loop=True)
     elif touch3.value:
         print('touched 3!')
-        circuit.pixels.fill((30, 30, 0))
+        circuit.pixels.fill((10, 10, 0))
         circuit.pixels.write()
         if not sample.playing or (
          (sample.playing and not sample.frequency == 10000)):
@@ -57,7 +56,7 @@ while True:
             sample.play(loop=True)
     elif touch4.value:
         print('touched 4!')
-        circuit.pixels.fill((0, 30, 0))
+        circuit.pixels.fill((0, 10, 0))
         circuit.pixels.write()
         if not sample.playing or (
          (sample.playing and not sample.frequency == 10800)):
@@ -65,7 +64,7 @@ while True:
             sample.play(loop=True)
     elif touch5.value:
         print('touched 5!')
-        circuit.pixels.fill((0, 30, 30))
+        circuit.pixels.fill((0, 10, 10))
         circuit.pixels.write()
         if not sample.playing or (
          (sample.playing and not sample.frequency == 12000)):
@@ -73,7 +72,7 @@ while True:
             sample.play(loop=True)
     elif touch6.value and not touch7.value:
         print('touched 6!')
-        circuit.pixels.fill((0, 0, 30))
+        circuit.pixels.fill((0, 0, 10))
         circuit.pixels.write()
         if not sample.playing or (
          (sample.playing and not sample.frequency == 13500)):
@@ -81,7 +80,7 @@ while True:
             sample.play(loop=True)
     elif touch7.value and not touch6.value:
         print('touched 7!')
-        circuit.pixels.fill((10, 0, 30))
+        circuit.pixels.fill((5, 0, 10))
         circuit.pixels.write()
         if not sample.playing or (
          (sample.playing and not sample.frequency == 15000)):
@@ -89,7 +88,7 @@ while True:
             sample.play(loop=True)
     elif touch6.value and touch7.value:
         print('touched 8!')
-        circuit.pixels.fill((30, 0, 30))
+        circuit.pixels.fill((10, 0, 10))
         circuit.pixels.write()
         if not sample.playing or (
          (sample.playing and not sample.frequency == 16000)):
